@@ -1,0 +1,70 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Building our web application with PluralSite Course",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all --parallel open:src",
+    "open:src": "set DEBUG=app & nodemon app.js",
+    "localtunnel": "lt --port 4000 --subdomain muhannad",
+    "share": "npm-run-all --parallel open:src localtunnel",
+    "lint": "eslint app.js"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+    },
+    "rules": {
+      "no-console": 1
+    }
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "Muhannad Raouf",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "chalk": "^2.3.2",
+    "debug": "^2.6.9",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "jquery": "^3.3.1",
+    "localtunnel": "^1.9.0",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3",
+    "npm-run-all": "^4.1.2",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0"
+  },
+  "nodemonConfig": {
+    "restarable": "rs",
+    "ignore": [
+      "node_modules/**/node_moduled"
+    ],
+    "delay": "2000",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  }
+}
