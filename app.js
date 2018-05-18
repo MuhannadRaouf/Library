@@ -14,13 +14,13 @@ const nav = [{
     title: "Author"
   }
 ];
-// Requiring the bookRouter script
+// Requiring the Routers scripts
 const bookRouter = require('./src/routes/bookRouter')(nav);
+const adminRouter = require('./src/routes/adminRouter')(nav);
 // Creating instances from express
 const app = express();
 // Pulling the enviroment port from Package.json file
 const port = process.env.PORT || 3000;
-
 
 // Setting the views directory
 app.set('views', './src/views');
@@ -34,8 +34,9 @@ app.use(express.static(path.join(__dirname, '/public/')));
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jqurey/dist')));
-// Uses the bookRouter Script to route between books page
+// Uses the Routers Script to route between books page
 app.use('/books', bookRouter);
+app.use('/admin', adminRouter);
 
 // Get Function to render the home page
 app.get('/', (req, res) => {

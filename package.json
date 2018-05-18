@@ -46,6 +46,7 @@
     "http": "0.0.0",
     "jquery": "^3.3.1",
     "localtunnel": "^1.9.0",
+    "mongodb": "^3.0.7",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.3",
     "npm-run-all": "^4.1.2",
