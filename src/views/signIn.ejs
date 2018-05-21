@@ -27,14 +27,19 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <%for (let i = 0; i < nav.length;i++){%>
+        <%for (var i = 0; i < nav.length;i++){%>
         <li><a href="<%= nav[i].link%>"><%= nav[i].title%></a></li>
         <%}%>
        
       </ul>
       <ul class="nav navbar-right navbar-nav">
-        <li>
-          <a href="/auth/logOut">Log Out</a>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+            </form>
+          </ul>
         </li>
       </ul>
     </nav>
@@ -80,37 +85,19 @@
       
       <div class="panel">
         <div class="panel-body">
-          
-          
-          
-          <!--/books-->
-          <%for (let i = 0; i < book.length;i++){%>
+          <!--/stories-->
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="https://winona.lib.mn.us/wp-content/uploads/2017/03/open_book.jpg" style="width:100px;height:100px" class="img-circle"></a>
-            </div>
-            <div class="col-md-10 col-sm-9">
-              <h3><%= book[i].title%></h3>
-              <div class="row">
-                <div class="col-xs-9">
-                  <h4><span class="label label-default"><%= book[i].author%></span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • 
-                  <a href="/books/<%= book[i]._id%>" class="text-muted">Read More</a></small>
-                  </h4></div>
-                <div class="col-xs-3"></div>
-              </div>
-              <br><br>
+              Sign In! or <a href='/'>Sign Up</a>
+              <form name"signUpForm" action="/auth/signIn" method="post">
+                UserName: <input name="username" id="username" /><br/>
+                Password: <input name="password" id="password" type="password" /><br/>
+                <input type="submit" value="Sign In" />
+              </form>
             </div>
           </div>
-          <hr>
-          <%}%>
-          <!--/books-->
-          
-          
-          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
-        
-          
+          <hr>        
         </div>
       </div>
                                                                                        
@@ -142,6 +129,7 @@
 <hr>
 
 <hr>
+
 
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>

@@ -11,7 +11,7 @@
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -34,12 +34,7 @@
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-          <ul class="dropdown-menu" style="padding:12px;">
-            <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-            </form>
-          </ul>
+          <a href="/auth/logOut">Log Out</a>
         </li>
       </ul>
     </nav>
@@ -89,11 +84,11 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              Sign Up!
-              <form name"signUpForm" action="/auth/signUp" method="post">
+              Sign Up! or <a href='/auth/signIn'>Sign In</a>
+              <form name="signUpForm" action="/auth/signUp" method="post">
                 UserName: <input name="username" id="username" /><br/>
-                Password: <input name="password" id="password" /><br/>
-                <input type="submit" value="Sign up" />
+                Password: <input name="password" id="password" type="password" /><br/>
+                <input type="submit" value="Sign Up" />
               </form>
             </div>
           </div>
@@ -114,11 +109,12 @@
   <div class="row">
     <div class="col col-sm-12">
       
-      <h1>Follow Us</h1>
+      <h1>Follow Me</h1>
       <div class="btn-group">
-       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
-	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
-	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      <a class="btn btn-twitter btn-lg" href="https://twitter.com/MuhanadRaouf"><i class="icon-twitter icon-large"></i> Twitter</a>
+	    <a class="btn btn-github btn-lg" href="https://github.com/MuhannadRaouf"><i class="icon-github icon-large"></i>GitHub</a>
+	    <a class="btn btn-linkedin btn-lg" href="https://www.linkedin.com/in/muhannad-raouf/"><i class="icon-linkedin icon-large"></i> LinkedIn</a>
+      <a class="btn btn-upwork btn-lg" href="https://www.upwork.com/o/profiles/users/_~0171b93afe9b477443/">UpWork</a>
       </div>
       
     </div>
@@ -129,26 +125,8 @@
 
 <hr>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <ul class="list-inline">
-          <li><i class="icon-facebook icon-2x"></i></li>
-          <li><i class="icon-twitter icon-2x"></i></li>
-          <li><i class="icon-google-plus icon-2x"></i></li>
-          <li><i class="icon-pinterest icon-2x"></i></li>
-        </ul>
-        
-      </div>
-      <div class="col-sm-6">
-          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
-      </div>
-    </div>
-  </div>
-</footer>
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 	</body>
 </html>

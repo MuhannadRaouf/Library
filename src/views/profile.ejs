@@ -12,6 +12,7 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="/css/styles.css" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -27,13 +28,13 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <%for (let i = 0; i < nav.length;i++){%>
+        <%for (var i = 0; i < nav.length;i++){%>
         <li><a href="<%= nav[i].link%>"><%= nav[i].title%></a></li>
         <%}%>
        
       </ul>
       <ul class="nav navbar-right navbar-nav">
-        <li>
+        <li class="dropdown">
           <a href="/auth/logOut">Log Out</a>
         </li>
       </ul>
@@ -77,26 +78,20 @@
   <div class="row">
     
     <div class="col-md-12"> 
-      
-      <div class="panel">
+        <div class="panel">
         <div class="panel-body">
-          
-          
-          
-          <!--/books-->
-          <%for (let i = 0; i < book.length;i++){%>
+          <!--/stories-->
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="https://winona.lib.mn.us/wp-content/uploads/2017/03/open_book.jpg" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="User Image" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/User_reading_a_book.png" width="100px" height="100px"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3><%= book[i].title%></h3>
+              <h3>MuhannadRaouf</h3>
               <div class="row">
                 <div class="col-xs-9">
-                  <h4><span class="label label-default"><%= book[i].author%></span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • 
-                  <a href="/books/<%= book[i]._id%>" class="text-muted">Read More</a></small>
+                  <h4><span class="label label-default">97thfloor.com</span></h4><h4>
+                  <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="#" class="text-muted">Read More</a></small>
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
@@ -104,14 +99,6 @@
             </div>
           </div>
           <hr>
-          <%}%>
-          <!--/books-->
-          
-          
-          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
-        
-          
-        </div>
       </div>
                                                                                        
 	                                                
@@ -129,10 +116,10 @@
       
       <h1>Follow Me</h1>
       <div class="btn-group">
-        <a class="btn btn-twitter btn-lg" href="https://twitter.com/MuhanadRaouf"><i class="icon-twitter icon-large"></i> Twitter</a>
-	      <a class="btn btn-github btn-lg" href="https://github.com/MuhannadRaouf"><i class="icon-github icon-large"></i>GitHub</a>
-	      <a class="btn btn-linkedin btn-lg" href="https://www.linkedin.com/in/muhannad-raouf/"><i class="icon-linkedin icon-large"></i> LinkedIn</a>
-        <a class="btn btn-upwork btn-lg" href="https://www.upwork.com/o/profiles/users/_~0171b93afe9b477443/">UpWork</a>
+       <a class="btn btn-twitter btn-lg" href="https://twitter.com/MuhanadRaouf"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-github btn-lg" href="https://github.com/MuhannadRaouf"><i class="icon-github icon-large"></i>GitHub</a>
+	   <a class="btn btn-linkedin btn-lg" href="https://www.linkedin.com/in/muhannad-raouf/"><i class="icon-linkedin icon-large"></i> LinkedIn</a>
+       <a class="btn btn-upwork btn-lg" href="https://www.upwork.com/o/profiles/users/_~0171b93afe9b477443/">UpWork</a>
       </div>
       
     </div>

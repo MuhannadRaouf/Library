@@ -5,51 +5,59 @@ const debug = require('debug')('app:adminRoutes');
 const adminRouter = express.Router();
 const books = [
   {
-    title: 'War and Peace',
-    genre: 'Historical Fiction',
-    author: 'Lev Nikolayevich Tolstoy',
-    read: false
-  },
-  {
-    title: 'Les Misérables',
-    genre: 'Historical Fiction',
-    author: 'Victor Hugo',
-    read: false
-  },
-  {
-    title: 'The Time Machine',
-    genre: 'Science Fiction',
-    author: 'H. G. Wells',
-    read: false
-  },
-  {
-    title: 'A Journey into the Center of the Earth',
-    genre: 'Science Fiction',
-    author: 'Jules Verne',
-    read: false
-  },
-  {
-    title: 'The Dark World',
+    title: "Harry Potter and the Sorcerer's Stone",
     genre: 'Fantasy',
-    author: 'Henry Kuttner',
+    author: 'J.K. Rowling',
+    bookId: 3,
     read: false
   },
   {
-    title: 'The Wind in the Willows',
+    title: "Harry Potter and the Chamber of Secrets",
     genre: 'Fantasy',
-    author: 'Kenneth Grahame',
+    author: 'J.K. Rowling',
+    bookId: 15881,
     read: false
   },
   {
-    title: 'Life On The Mississippi',
-    genre: 'History',
-    author: 'Mark Twain',
+    title: "Harry Potter and the Prisoner of Azkaban",
+    genre: 'Fantasy',
+    author: 'J.K. Rowling',
+    bookId: 5,
     read: false
   },
   {
-    title: 'Childhood',
-    genre: 'Biography',
-    author: 'Lev Nikolayevich Tolstoy',
+    title: "Harry Potter and the Goblet of Fire",
+    genre: 'Fantasy',
+    author: 'J.K. Rowling',
+    bookId: 6,
+    read: false
+  },
+  {
+    title: "Harry Potter and the Order of the Phoenix",
+    genre: 'Fantasy',
+    author: 'J.K. Rowling',
+    bookId: 2,
+    read: false
+  },
+  {
+    title: "Harry Potter and Half-Blood Prince",
+    genre: 'Fantasy',
+    author: 'J.K. Rowling',
+    bookId: 1,
+    read: false
+  },
+  {
+    title: "Harry Potter and the Deathly Hallows",
+    genre: 'Fantasy',
+    author: 'J.K. Rowling',
+    bookId: 136251,
+    read: false
+  },
+  {
+    title: "Harry Potter and the Cursed Child",
+    genre: 'Fantasy',
+    author: 'J.K. Rowling',
+    bookId: 29056083,
     read: false
   }];
 

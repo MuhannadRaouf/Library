@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm-run-all --parallel open:src",
-    "open:src": "set DEBUG=app & nodemon app.js",
+    "start": "npm-run-all --parallel open:src share",
+    "open:src": "set DEBUG=app* & nodemon app.js",
     "localtunnel": "lt --port 4000 --subdomain muhannad",
     "share": "npm-run-all --parallel open:src localtunnel",
     "lint": "eslint app.js"
@@ -38,11 +38,15 @@
   "author": "Muhannad Raouf",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.0.0",
     "chalk": "^2.3.2",
+    "cookie-parser": "^1.4.3",
     "debug": "^2.6.9",
     "ejs": "^2.5.8",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "http": "0.0.0",
     "jquery": "^3.3.1",
     "localtunnel": "^1.9.0",
@@ -50,7 +54,10 @@
     "morgan": "^1.9.0",
     "nodemon": "^1.17.3",
     "npm-run-all": "^4.1.2",
-    "pug": "^2.0.3"
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.3",
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

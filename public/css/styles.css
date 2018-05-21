@@ -66,8 +66,12 @@ footer {
   height:40px;
 }
 
-a,a:hover {
+a {
   color:#223344;
+  text-decoration:none;
+}
+a:hover{
+  color:rgb(74, 160, 39);
   text-decoration:none;
 }
 
@@ -159,9 +163,11 @@ a,a:hover {
 }
     
 .btn-twitter {background-color:#4099FF;color:#fff;}
-.btn-facebook {background-color:#3B5998;color:#fff;}
-.btn-google-plus {background-color:#d34836;color:#fff;}
+.btn-github {background-color:rgb(0, 0, 0);color:#fff;}
+.btn-linkedin {background-color:#4286f4;color:#fff;}
+.btn-upwork {background-color:#6fda44;color:#4b4b4b;}
 
-.btn-twitter:hover {background-color:#3088FF;color:#62BBFF;}
-.btn-facebook:hover {background-color:#2A4998;color:#4C6BBA;}
-.btn-google-plus:hover {background-color:#C23836;color:#E45A58;}
+.btn-twitter:hover {background-color:#fff;color:#4099FF;}
+.btn-github:hover {background-color:#fff;color:rgb(0, 0, 0);}
+.btn-linkedin:hover {background-color:#fff;color:#4286f4;}
+.btn-upwork:hover {background-color:#4b4b4b;color:#6fda44;}
